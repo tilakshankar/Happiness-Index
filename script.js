@@ -1,6 +1,7 @@
 function test()
 {
     var data= document.getElementsByName("meet");
+    var val;
     
 
     for(var i=0;i<data.length;i++)
@@ -27,11 +28,17 @@ function test()
 
     var store1=localStorage.getItem("Question2",val);
 
+    
     }
 
 function results()
 {
+    var val;
+    var store= localStorage.getItem("Question1",val);
+    var store1= localStorage.getItem("Question2",val);
+       
     var result= store*store1;
 
     document.write("Happiness Index is:"+ result);
+
 }
