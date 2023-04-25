@@ -27,7 +27,9 @@
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
  
-   
+   <!-- Scrpit-->
+   ,<script src="script.js"></script>
+
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600' rel='stylesheet' type='text/css'>
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
     <style>
@@ -82,21 +84,21 @@
         <div>
           <h4>How often do you engage in activities that make you happy?</h4>
           <div class="question-answer">
-            <label><input type="radio" value="none" name="meet" />Rarely</label>
-            <label><input type="radio" value="none" name="meet" />Occasionally</label>
-            <label><input type="radio" value="none" name="meet" />Sometimes</label>
-            <label><input type="radio" value="none" name="meet" />Often</label>
-            <label><input type="radio" value="none" name="meet" />Almost always</label>
+            <label><input type="radio" value="1" name="meet" id="q1o1" onclick="test()"/>Rarely</label>
+            <label><input type="radio" value="2" name="meet" id="q1o2" onclick="test()" />Occasionally</label>
+            <label><input type="radio" value="3" name="meet" id="q1o3" onclick="test()"/>Sometimes</label>
+            <label><input type="radio" value="4" name="meet" id="q1o4" onclick="test()"/>Often</label>
+            <label><input type="radio" value="5" name="meet" id="q1o5" onclick="test()"/>Almost always</label>
           </div>
         </div>
         <div>
           <h4>How often do you feel a sense of purpose and meaning in your life?</h4>
           <div class="question-answer">
-            <label><input type="radio" value="none" name="involved" />Never</label>
-            <label><input type="radio" value="none" name="involved" />Rarely</label>
-            <label><input type="radio" value="none" name="involved" />Sometimes</label>
-            <label><input type="radio" value="none" name="involved" />Often</label>
-            <label><input type="radio" value="none" name="involved" />Almost always</label>
+            <label><input type="radio" value="1" name="involved" onclick="test()" />Never</label>
+            <label><input type="radio" value="2" name="involved" onclick="test()"/>Rarely</label>
+            <label><input type="radio" value="3" name="involved" onclick="test()"/>Sometimes</label>
+            <label><input type="radio" value="4" name="involved" onclick="test()"/>Often</label>
+            <label><input type="radio" value="5" name="involved" onclick="test()"/>Almost always</label>
           </div>
         </div>
         <div>
@@ -125,7 +127,7 @@
             <label><input type="radio" value="none" name="fundraising" />Never</label>
             <label><input type="radio" value="none" name="fundraising" />Rarely</label>
             <label><input type="radio" value="none" name="fundraising" />Sometimes</label>
-            <label><input type="radio" value="none" name="nafundraisingme" />Often</label>
+            <label><input type="radio" value="none" name="fundraising" />Often</label>
             <label><input type="radio" value="none" name="fundraising" />Almost always</label>
           </div>
         </div>
@@ -148,10 +150,12 @@
               <label><input type="radio" value="none" name="name" />Often</label>
               <label><input type="radio" value="none" name="name" />Almost always</label>
             </div>
-        </div>    
-        <div class="btn-block">
-          <button type="submit" href="/">Send</button>
+        </div>  
+        <form onsubmit="results()" >
+        <div>
+          <a class="read_more" href="">Submit</a>
         </div>
+        </form>
       </form>
     </div>
   </body>
