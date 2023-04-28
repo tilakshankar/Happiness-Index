@@ -124,9 +124,9 @@ function results()
 
     var total=7;
        
-    var result= store*store1*store2*store3*store4*store5*store6 / total;
+    var result= (store*0.2+store1*0.2+store2*0.2+store3*0.2+store4*0.2+store5*0.2+store6*0.2)*100 / total;
 
-    document.write("Happiness Index is:\n"+ result);
+    document.write("Happiness Index is:\n"+ result+"%);
 
 
 }
