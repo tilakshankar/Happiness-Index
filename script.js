@@ -113,20 +113,29 @@ function test()
 
 function results()
 {
-    var val;
-    var store= localStorage.getItem("Question1",val);
-    var store1= localStorage.getItem("Question2",val);
-    var store2= localStorage.getItem("Question3",val);
-    var store3=localStorage.getItem("Question4",val);
-    var store4=localStorage.getItem("Question5",val);
-    var store5=localStorage.getItem("Question6",val);
-    var store6=localStorage.getItem("Question7",val);
+  var total = 7; // Assuming there are 7 questions
+  var store = parseInt(localStorage.getItem("Question1")) || 0;
+  var store1 = parseInt(localStorage.getItem("Question2")) || 0;
+  var store2 = parseInt(localStorage.getItem("Question3")) || 0;
+  var store3 = parseInt(localStorage.getItem("Question4")) || 0;
+  var store4 = parseInt(localStorage.getItem("Question5")) || 0;
+  var store5 = parseInt(localStorage.getItem("Question6")) || 0;
+  var store6 = parseInt(localStorage.getItem("Question7")) || 0;
+  
+  var sum = store + store1 + store2 + store3 + store4 + store5 + store6;
+  var result = (sum * 100) / (total * 5);
+  result = result.toFixed(2);
 
-    var total=7;
-       
-    var result= (store+store1+store2+store3+store4*+store5*+store6*)*100 / total;
+    
+    
+    
 
-    document.write("Happiness Index is:\n"+ result+"%");
+  
+    var urlWithResult = 'result.html?result=' + encodeURIComponent(result);
+
+    // Redirect to the new URL
+    window.location.href = urlWithResult;
 
 
 }
+
